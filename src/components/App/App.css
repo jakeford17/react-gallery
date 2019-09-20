@@ -21,3 +21,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+img {
+  height: 250px;
+  width: 250px;
+  padding: 5px;
+  display: inline-flex;
+}
+
+li {
+  list-style-type: none;
+}
