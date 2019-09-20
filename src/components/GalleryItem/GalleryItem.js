@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 
 class GalleryList extends Component {
     photoClick = () => {
@@ -6,8 +7,12 @@ class GalleryList extends Component {
     }
 
     likeClick = () => {
-        console.log("CLICKED ON LIKE BUTTON");
-        this.props.putRequest();
+        Axios({
+            method: 'PUT',
+            url: 'gallery/like/' + this.props.photo.id
+        }).then((result) => {
+            this.props.getRequest();
+        })
     }
 
     render() {
