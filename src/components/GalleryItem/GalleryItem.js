@@ -7,6 +7,7 @@ class GalleryList extends Component {
 
     likeClick = () => {
         console.log("CLICKED ON LIKE BUTTON");
+        this.props.putRequest();
     }
 
     render() {
@@ -15,6 +16,7 @@ class GalleryList extends Component {
             <img src={this.props.photo.path} alt={this.props.photo.description} onClick={this.photoClick}></img><br/>
             <button onClick={this.likeClick}>LIKE</button><br/>
             <p>Likes: {this.props.photo.likes}</p>
+            <hr/>
             </>
         );
     }

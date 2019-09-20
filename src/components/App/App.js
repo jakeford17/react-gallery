@@ -19,6 +19,7 @@ class App extends Component {
       url: '/gallery'
     }).then((response) => {
       console.log("Response:", response.data);
+      this.setState({imagesArray:[]});
       response.data.forEach((image) => {
         this.setState({
           imagesArray: [...this.state.imagesArray, image]
@@ -33,10 +34,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Boston Sports Championships Gallery</h1>
+          <h2 className="App-title">Since 2000</h2>
         </header>
         <br/>
         {this.state.images}
-        <GalleryList listOfImages={this.state.imagesArray}/>
+        <GalleryList getRequest={this.getImages} listOfImages={this.state.imagesArray}/>
       </div>
     );
   }
