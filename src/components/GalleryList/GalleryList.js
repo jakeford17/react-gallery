@@ -8,9 +8,9 @@ class GalleryList extends Component {
 
     render() {
         return (
-            <>
-            {this.props.listOfImages.map((photo) => <h2 key={photo.id}><GalleryItem photo={photo} getRequest={this.props.getRequest}/></h2>)}
-            </>
+            <ul>
+            {this.props.listOfImages.map((photo) => <li key={photo.id}><GalleryItem photo={photo} getRequest={this.props.getRequest}/></li>)}
+            </ul>
         );
     }
 }
