@@ -34,7 +34,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Boston Sports Championships Gallery</h1>
-          <h2 className="App-title">Since 2000</h2>
         </header>
         <br/>
         {this.state.images}

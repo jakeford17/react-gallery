@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 .App {
   text-align: center;
 }
@@ -10,11 +12,15 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+body{
+  font-family: 'Permanent Marker', cursive;
 }
 
 @keyframes App-logo-spin {
@@ -23,12 +29,22 @@
 }
 
 img {
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
   padding: 5px;
   display: inline-flex;
 }
 
 li {
   list-style-type: none;
+}
+
+button {
+  font-family: 'Permanent Marker', cursive;
+  background-color: gold;
+  width: 150px;
+}
+
+hr {
+  border: 1.5px dashed black;
 }
