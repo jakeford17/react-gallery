@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 
 class GalleryList extends Component {
-    photoClick = () => {
+    state = {
+        displayImage: true
+    }
+
+    photoClickToggle = () => {
         console.log("CLICKED ON PHOTO");
+        this.setState({
+            displayImage: !this.state.displayImage
+        })
     }
 
     likeClick = () => {
@@ -16,9 +23,12 @@ class GalleryList extends Component {
     }
 
     render() {
+        const{displayImage} = this.state;
         return (
             <>
-            <img src={this.props.photo.path} alt={this.props.photo.description} onClick={this.photoClick}></img><br/>
+            {displayImage === true ? <img src={this.props.photo.path} alt={this.props.photo.description} onClick={this.photoClickToggle}></img> :""}
+            {displayImage === false ? <p onClick={this.photoClickToggle}> {this.props.photo.description}</p> :""}
+            <br/>
             <button onClick={this.likeClick}>LIKE</button><br/>
             <p>Likes: {this.props.photo.likes}</p>
             <hr/>
