@@ -27,7 +27,7 @@ class GalleryList extends Component {
         return (
             <>
             {displayImage === true ? <img src={this.props.photo.path} alt={this.props.photo.description} onClick={this.photoClickToggle}></img> :""}
-            {displayImage === false ? <p onClick={this.photoClickToggle}> {this.props.photo.description}</p> :""}
+            {displayImage === false ? <div className="toggleClass" onClick={this.photoClickToggle}> {this.props.photo.description}</div> :""}
             <br/>
             <button onClick={this.likeClick}>LIKE</button><br/>
             <p>Likes: {this.props.photo.likes}</p>

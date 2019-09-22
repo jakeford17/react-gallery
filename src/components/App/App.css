@@ -49,3 +49,15 @@ button {
 hr {
   border: 1.5px dashed black;
 }
+
+.toggleClass {
+  height: 350px;
+  width: 350px;
+  padding: 5px;
+  display: inline-flex;
+  font-size: 2.5em;
+  color: gold;
+  background-color: black;
+  border: 1.5px solid gold;
+  vertical-align: middle;
+}
