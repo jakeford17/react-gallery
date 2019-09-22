@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
-// import axios from 'axios';
-
+//importing GalleryItem to use as a component
 
 class GalleryList extends Component {
-    
-
     render() {
         return (
             <ul>
@@ -14,5 +11,7 @@ class GalleryList extends Component {
         );
     }
 }
+//mapping through the listOfImages array (passed here from App.js) and adding a GalleryItem li for each image object (all inside a ul)
+//via props, passing each photo object and the getImages/getRequest function to GalleryItem
 
 export default GalleryList;
