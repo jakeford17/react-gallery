@@ -28,16 +28,16 @@ class GalleryList extends Component {
     //running the getRequest function to re-render the image with the new number of likes
 
     render() {
-        const{displayImage} = this.state;
+        const { displayImage } = this.state;
         //using a const to reference the object in this.state, which has a boolean value (set to true to start)
         return (
             <>
-            {displayImage === true ? <img src={this.props.photo.path} alt={this.props.photo.description} onClick={this.photoClickToggle}></img> :""}
-            {displayImage === false ? <div className="toggleClass" onClick={this.photoClickToggle}> {this.props.photo.description}</div> :""}
-            <br/>
-            <button onClick={this.likeClick}>LIKE</button><br/>
-            <p>Likes: {this.props.photo.likes}</p>
-            <hr/>
+                {displayImage === true ? <img src={this.props.photo.path} alt={this.props.photo.description} onClick={this.photoClickToggle}></img> : ""}
+                {displayImage === false ? <div className="toggleClass" onClick={this.photoClickToggle}> {this.props.photo.description}</div> : ""}
+                <br />
+                <button onClick={this.likeClick}>LIKE</button><br />
+                <p>Likes: {this.props.photo.likes}</p>
+                <hr />
             </>
         );
     }

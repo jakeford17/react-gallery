@@ -6,7 +6,7 @@ class GalleryList extends Component {
     render() {
         return (
             <ul>
-            {this.props.listOfImages.map((photo) => <li key={photo.id}><GalleryItem photo={photo} getRequest={this.props.getRequest}/></li>)}
+                {this.props.listOfImages.map((photo) => <li key={photo.id}><GalleryItem photo={photo} getRequest={this.props.getRequest} /></li>)}
             </ul>
         );
     }

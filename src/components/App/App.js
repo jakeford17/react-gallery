@@ -11,7 +11,7 @@ class App extends Component {
   };
   //setting up an empty array to use for GET request to put image objects into
 
-  componentDidMount = () => { 
+  componentDidMount = () => {
     this.getImages();
   }
   //runs getImages to display images on page load
@@ -22,7 +22,7 @@ class App extends Component {
       url: '/gallery'
     }).then((response) => {
       console.log("Response:", response.data);
-      this.setState({imagesArray:[]});
+      this.setState({ imagesArray: [] });
       response.data.forEach((image) => {
         this.setState({
           imagesArray: [...this.state.imagesArray, image]
@@ -42,8 +42,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Boston Sports Championships Gallery</h1>
         </header>
-        <br/>
-        <GalleryList getRequest={this.getImages} listOfImages={this.state.imagesArray}/>
+        <br />
+        <GalleryList getRequest={this.getImages} listOfImages={this.state.imagesArray} />
       </div>
     );
   }
